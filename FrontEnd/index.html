@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+<header>
+	<div class="modifyHeader displayNone"></div>
+	<div class="mainHeader">
+		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		<nav>
+			<ul>
+				<li>projets</li>
+				<li>contact</li>
+				<li>login</li>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<main>
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+		</figure>
+		<article>
+			<h2>Designer d'espace</h2>
+			<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+			<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+		</article>
+	</section>
+	<section class="filters">
+		<div><button id="all"><span>Tous</span></button></div>
+		<div><button id="objects"><span>Objets</span></button></div>
+		<div><button id="apparts"><span>Appartements</span></button></div>
+		<div><button id="hotels"><span>Hotels & restaurants</span></button></div>
+	</section>
+	<section id="portfolio">
+		<h2>Mes Projets</h2>
+		<div class="gallery">
+		</div>
+	</section>
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+	<section class="removeBox modifyContainer displayNone">
+        <span class="xMarker"></span>
+        <div class="removeContainer">
+                <h2>Galerie photo</h2>
+                <div class="figureContainer">
+                </div>
+        </div>
+        <span class="bar"></span>
+        <p class="addWork">Ajouter une photo</p>
+	</section>
+	<section class="addBox modifyContainer displayNone">
+        <span class="xMarker"></span>
+        <span class="bar"></span>
+        <div class="addContainer">
+            <h2>Ajout photo</h2>
+        	<form id="formAddWork" enctype="multipart/form-data" method="post">
+                <div class="imgAddContainer">
+                        <span class="logoContainer"></span>
+                        <label class="buttonImgContainer" for="imgSend">+ Ajouter photo</label>
+                        <input type="file" accept=".jpg, .png" name="image" id="imgSend" class="buttonImgInput" required>
+                        <p class="infoImgAdd">jpg, png : 4mo max</p>
+						<div class="imgPreview"></div>
+				</div>
+        		<div class="titleContainer">
+                	<p class="boxTitle">Titre</p>
+                	<input type="text" id="title" name="title" class="boxInput" required>
+                	<label for="categories"><p class="boxTitle">Catégorie</p></label>
+                	<select id="categories" required>
+                	</select>
+        		</div>
+				<div class="parentSubmit">
+                <input id="submit" type="submit" value="Valider">
+				</div>
+       		</form>
+		</div>
+<span class="backMarker"></span>
+</section>
+</main>
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<script src="./assets/button.js"></script>
+<script src="./assets/connected.js"></script>
+<script src="./assets/manageworks.js"></script>
+<script src="./assets/index.js"></script>
+<script src="./assets/filter.js"></script>
+</body>
+</html>
