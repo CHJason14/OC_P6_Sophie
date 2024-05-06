@@ -7,12 +7,7 @@ const buttonContainer = document.querySelectorAll(".filters > div");
 
 let elementArrayCopy = [];
 
-    fetch("http://localhost:5678/api/works", )
-    .then((res) => {
-        return res.json();
-    })
-    .then ((works) => {
-        const filterAction = (selectedButtonIndex, categoryId) => {
+    const filterAction = (selectedButtonIndex, categoryId) => {
             for (let i = 0; i < buttonContainer.length; i++) {
                 buttonContainer.item(i).classList.toggle("selected", i === selectedButtonIndex);
             }
@@ -26,5 +21,3 @@ let elementArrayCopy = [];
         buttonApparts.addEventListener('click', () => filterAction(2, 2));
         buttonHotels.addEventListener('click', () => filterAction(3, 3));
 
-    })
-    .catch((err) => console.log(err));
