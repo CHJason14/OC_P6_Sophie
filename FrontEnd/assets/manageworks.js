@@ -201,6 +201,8 @@ let pageYOffset = 0;
 
             const formContainer = document.getElementById("formAddWork");
             let storageToken = sessionStorage.getItem("tokens"); 
+
+
             validateButton.addEventListener('click', (e) => {
                 e.preventDefault();
                 if ((boxInput.value && boxInput2.value && imgName) == false) {
@@ -242,7 +244,7 @@ let pageYOffset = 0;
                         alert ('Projet Ajouté avec succès');
                         elementArray.push({src: window.URL.createObjectURL(imgName), title: boxInput.value, categoryid: categoryIdSelected});
                         console.log(elementArray);
-                        affichageProjet();
+                        affichageProjet(elementArray);
                     } catch (error) {
                         console.log("erreur :", error)
                     }
